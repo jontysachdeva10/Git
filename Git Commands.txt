@@ -1,0 +1,72 @@
+To PULL : Git clone to local from github ->
+ 
+	- git clone <url> // only used once 
+	- ls //it will show our repo of github
+	- cd <gitRepo>
+	- ls  //will show us the content in repo
+	
+If we have created/added any new file in github repo, to copy it to local pc 
+	- git pull //to get the latest changes from git repo
+
+To print the data of file on git-bash
+	- cat <file_name>
+
+--------------------------------------------------------------------------
+
+TO PUSH : local repo files to Github ->
+
+	- git ls // will show all the files, including the newly added one
+	- git status // to check the status of all files
+	- git add <file_name>
+	- git commit -m "FirstCommit"
+	- git push origin master
+
+-----------------------------------------------------------------------
+ERROR'403' : Cannot access the github path
+	
+	1) Check if the repo is Public
+	2) check the remote
+		- git remote -v
+	3) Check the username and password
+	** This error occurs when we generally used older account with git bash and now we are using a new account. 
+		- git config user.email
+	
+	Control Panel > Credential Manager > Local Credentials
+
+------------------------------------------------------------------------
+When there's an EMPTY REPO : 
+
+	- eco '# Repo_name' >> README.md
+	- git init
+	- git add README.md or any other file
+ ( OR     git add .  // if there are 100s of updated/new files
+ OR	git add --all //but if there are couple of directories )
+
+	- git commit -m "FirstCommit"
+	- git remote add origin <url>
+	- git push -u origin master
+
+---------------------------------------------------------------------------
+Merging branch: Switching to another branch
+
+	- git checkout branch_name
+	- git merge master
+		press Esc, then type :wq    // wait nd quit... the files will be added
+	- git branch // to check to which branch we are connected
+	- ls // to check the files added correctly
+	- git push origin branch_name
+
+----------------------------------
+ - git log // To print the whole log of commits on gitbash
+
+ - ls-la // shows gitignore file // hidden file
+
+----------------------------------------
+DELETE a file from git :
+
+	- git rm <file>
+	- git commit -m "abc"
+	- git push
+
+	
+	
